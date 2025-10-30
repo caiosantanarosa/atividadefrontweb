@@ -1,0 +1,591 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* estilo p todas as paginas */
+
+.container {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #fcbf49;
+    color: #ffffff;
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "main main"
+        "footer footer";
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+.header {
+    grid-area: header;
+    padding: 10px;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #d62828;
+
+    border-radius: 0px 0px 30px 30px;
+}
+
+.menunav {
+    width: 50%;
+}
+
+.icon-menu {
+    display: none;
+    border: none;
+    background: none;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
+    transition: ease-in-out 0.3s;
+}
+
+.icon-menu:hover {
+    background-color: #f77f00;
+    font-weight: bold;
+    cursor: pointer;
+    transition: ease-in-out 0.3s;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+    width: 100%;
+    transition: ease-in-out 0.3s;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.menu li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    list-style: none;
+    position: relative;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.menu li:hover {
+    background-color: #f77f00;
+    font-weight: bold;
+    cursor: pointer;
+    transition: ease-in-out 0.3s;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.submenu {
+    display: flex;
+    position: absolute;
+    background-color: #f77f00;
+    border-radius: 10px;
+    flex-direction: column;
+    padding: 15px;
+    gap: 10px;
+    visibility: hidden;
+    top: 45px;
+    box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 25px 50px -12px;
+}
+
+.dropdown:hover .submenu {
+    visibility: visible;
+}
+
+.submenu a {
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.submenu a:hover {
+    background-color: #d62828;
+    font-weight: bold;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transition: ease-in-out 0.3s;
+}
+
+.main {
+    grid-area: main;
+    padding: 10px auto;
+    width: 100%;
+    justify-items: center;
+}
+
+/* estilo p tela inicial  */
+
+.main-inicial {
+    display: grid;
+    grid-template-areas:
+        "img img img"
+        "primeiro primeiro primeiro"
+        "segundo terceiro quarto";
+    margin: 10px auto 50px;
+    gap: 50px;
+}
+
+.main-inicial img {
+    display: block;
+    margin: auto;
+    border-radius: 20px;
+    width: max(1200px, 50vw);
+    height: auto;
+    grid-area: img;
+}
+
+#section {
+    text-align: justify;
+    margin: auto;
+    background-color: #E76F51;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px 40px;
+}
+
+.main-inicial #section a {
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #d62828;
+    padding: 7px;
+    border-radius: 7px;
+    margin-top: 5px;
+    transition: ease-in-out 0.3s;
+}
+
+.main-inicial #section a:hover {
+    font-weight: bold;
+    background-color: #f77f00;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transform: scale(5px);
+}
+
+.main-inicial .primeiro {
+    grid-area: primeiro;
+    height: 120px;
+    width: 1200px;
+}
+
+.main-inicial .segundo {
+    grid-area: segundo;
+    height: 300px;
+    width: 300px;
+}
+
+.main-inicial .terceiro {
+    grid-area: terceiro;
+    height: 300px;
+    width: 400px;
+}
+
+.main-inicial .quarto {
+    grid-area: quarto;
+    height: 300px;
+    width: 300px;
+}
+
+/* estilo p tela de projetos  */
+
+.main-projetos {
+    display: grid;
+    grid-template-areas:
+        "titulo titulo"
+        "um dois"
+        "tres quatro";
+    gap: 20px;
+    padding: 0 3vw 0 3vw;
+}
+
+.main-projetos .titulo {
+    grid-area: titulo;
+    text-align: center;
+    margin: 20px;
+}
+
+.info-projetos {
+    text-align: center;
+    margin: auto auto 20px auto;
+    background-color: #E76F51;
+    padding: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px 40px;
+    height: 34vh;
+}
+
+.info-projetos a {
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #d62828;
+    padding: 7px;
+    border-radius: 7px;
+    margin-top: 5px;
+    transition: ease-in-out 0.3s;
+}
+
+.info-projetos a:hover {
+    font-weight: bold;
+    background-color: #f77f00;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transform: scale(5px);
+}
+
+.um {
+    grid-area: um;
+}
+
+.dois {
+    grid-area: dois;
+}
+
+.tres {
+    grid-area: tres;
+}
+
+.quatro {
+    grid-area: quatro;
+}
+
+/* estilo p tela de cadastro */
+.form {
+    background-color: #E76F51;
+    padding: 20px;
+    border-radius: 20px 40px;
+    width: 60%;
+    margin: 10px auto 50px auto;
+    display: grid;
+    grid-template-areas:
+        "form-dados form-endereco"
+        "botao botao";
+}
+
+.titulo-cadastro {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.texto-cadastro {
+    text-align: center;
+    margin: 0 20px 10px;
+    font-size: 20px;
+}
+
+.form h1 {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 25px;
+}
+
+.form label {
+    font-size: 15px;
+    margin-bottom: 3px;
+    font-weight: bold;
+}
+
+.form input,
+.form select {
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.form input:focus,
+.form select:focus {
+    outline: 2px solid #d62828;
+}
+
+.form-dados {
+    grid-area: form-dados;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    margin-right: 20px;
+}
+
+.form-endereco {
+    grid-area: form-endereco;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    margin-left: 20px;
+}
+
+.butao {
+    grid-area: botao;
+    justify-self: center;
+    padding: 15px 40px;
+    background-color: #d62828;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: ease-in-out 0.3s;
+    margin: 15px;
+    font-size: 15px;
+}
+
+.butao:hover {
+    font-weight: bold;
+    background-color: #f77f00;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+/* estilo p tela doacoes */
+
+.main-doacoes {
+    display: grid;
+    grid-template-areas:
+        "dados dados"
+        "paraonde formasdoar";
+}
+
+.dados {
+    grid-area: dados;
+    text-align: center;
+    margin: 20px;
+    background-color: #E76F51;
+    padding: 20px;
+    border-radius: 20px 40px;
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.texto-inicial {
+    width: 60%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    text-align: left;
+}
+
+.dados-dindin {
+    width: 30%;
+    height: 95%;
+    background-color: #fcbf49;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+    padding: 15px;
+    border-radius: 20px 40px;
+    text-align: right;
+}
+
+.progresso {
+    width: 70%;
+    height: 30px;
+    border-radius: 15px;
+    right: 30px;
+    background-color: #045079;
+}
+
+.barra-progresso {
+    height: 100%;
+    width: 50%;
+    border-radius: 15px 12px 12px 15px;
+    background-color: #d62828;
+    text-align: center;
+}
+
+.para-onde {
+    grid-area: paraonde;
+    text-align: center;
+    margin: 20px;
+    background-color: #E76F51;
+    padding: 20px;
+    border-radius: 20px 40px;
+    width: 40vw;
+}
+
+.formas-doar {
+    grid-area: formasdoar;
+    text-align: center;
+    margin: 20px;
+    background-color: #E76F51;
+    padding: 20px;
+    border-radius: 20px 40px;
+    width: 40vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#piechart {
+    width: 100%;
+    height: 300px;
+}
+
+.footer {
+    width: 100%;
+    grid-area: footer;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    background-color: #003049;
+}
+
+@media (max-width: 1200px) {
+    .main-inicial {
+        grid-template-areas:
+            "img img"
+            "primeiro segundo"
+            "terceiro quarto";
+        gap: 30px;
+    }
+
+    .main-projetos {
+        grid-template-areas:
+            "titulo"
+            "um"
+            "dois"
+            "tres"
+            "quatro";
+    }
+
+    .header {
+        flex-direction: column;
+        height: auto;
+        padding: 20px 0;
+    }
+
+    .main-inicial img {
+        width: 1000px;
+        height: auto;
+    }
+
+    .main-inicial #section {
+        height: 300px;
+        width: 400px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .main-inicial {
+        grid-template-areas:
+            "img"
+            "primeiro"
+            "segundo"
+            "terceiro"
+            "quarto";
+        gap: 50px;
+    }
+
+    .main-inicial img {
+        width: 800px;
+        height: auto;
+    }
+
+    .main-inicial #section {
+        width: 600px;
+        height: auto;
+    }
+
+    .main-doacoes {
+        grid-template-areas:
+            "dados"
+            "paraonde" 
+            "formasdoar";
+    }
+
+    .dados, .para-onde, .formas-doar {
+        width: 80%;
+    }
+}
+
+@media (max-width: 800px) {
+    .main-inicial img {
+        width: 100%;
+        height: auto;
+    }
+
+    .main-inicial #section {
+        width: 90%;
+    }
+
+    .form {
+        grid-template-areas:
+            "form-dados"
+            "form-endereco"
+            "botao";
+        width: 80%;
+    }
+
+    .form-dados {
+        margin: 0;
+    }
+
+    .form-endereco {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width:750px) {
+    .menunav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .icon-menu {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        ;
+    }
+
+    .submenu {
+        left: 140px;
+        top: 0px;
+    }
+
+    .info-projetos {
+        height: auto;
+    }
+
+    .dados{
+        flex-direction: column;
+        height: auto;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .texto-inicial, .dados-dindin {
+        width: 80%;
+        text-align: center;
+        gap: 10px;
+        align-items: center;
+    }
+}

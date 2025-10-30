@@ -4,38 +4,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cozinha Solidária 24hr</title>
+    <title>Cozinha Solidária 24hr - Projetos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="style/style.css">
 </head>
 
-<body>
-    <header>
+<body class="container">
+    <header class="header">
         <h1>Cozinha Solidária 24h</h1>
-        <nav>
-            <ul>
+        <nav class="menunav">
+            <button onclick="abreMenu()" class="icon-menu"><span class="material-symbols-outlined">menu</span></button>
+            <ul class="menu">
                 <li><a href="index.html">Início</a></li>
-                <li><a href="projetos.html">Projetos</a></li>
+                <li class="dropdown">
+                    <p>Nosso trabalho</p>
+                    <div class="submenu">
+                        <a href="projetos.html">Projetos</a>
+                        <a href="doacoes.html">Doações</a>
+                    </div>
+                </li>
                 <li><a href="cadastro.html">Cadastro</a></li>
             </ul>
         </nav>
+
     </header>
-    <main>
-        <h1>PROJETOS — Cozinha Solidária 24h</h1>
-        <section>
+    <main class="main main-projetos">
+        <h1 class="titulo">PROJETOS — Cozinha Solidária 24h</h1>
+        <section class="info-projetos um">
             <h2>Refeições do Amanhã</h2>
             <p>Nosso principal projeto garante refeições nutritivas, preparadas e distribuídas diariamente a pessoas em
                 situação de vulnerabilidade.</p>
             <p>Com alimentos reaproveitados de restaurantes, feiras e mercados parceiros, transformamos o que seria
                 desperdício em alimento e dignidade.</p>
             <p><strong>+2.000 refeições servidas por dia em 12 cidades.</strong></p>
-        </section>
-        <section>
+            </section>
+        <section class="info-projetos dois">
             <h2>Escola da Panela</h2>
             <p>Acreditamos que ensinar é multiplicar solidariedade.</p>
             <p>Nas oficinas da Escola da Panela, oferecemos cursos gratuitos de culinária acessível, reaproveitamento de
                 alimentos e higiene alimentar — capacitando pessoas para gerar renda e independência.</p>
             <p><strong>Mais de 800 alunos formados desde 2020.</strong></p>
         </section>
-        <section>
+        <section class="info-projetos tres">
             <h2>Desperdício Zero</h2>
             <p>O projeto Desperdício Zero conecta doadores de alimentos e insumos com cozinhas comunitárias parceiras.
             </p>
@@ -43,7 +53,7 @@
                 antes iriam para o lixo, reduzindo o impacto ambiental e social da fome.</p>
             <p><strong>85 toneladas de alimentos reaproveitados.</strong></p>
         </section>
-        <section>
+        <section class="info-projetos quatro">
             <h2>Voluntário de Coração</h2>
             <p>Nada disso seria possível sem nossas mãos solidárias.</p>
             <p>Seja cozinhando, distribuindo refeições, arrecadando alimentos ou organizando eventos, há sempre um
@@ -53,9 +63,9 @@
             <a href="cadastro.html">
                 <p>Cadastre-se como voluntário!</p>
             </a>
-        </section>
+        </section id="section">
     </main>
-    <footer>
+    <footer class="footer">
         <h2>Contato</h2>
         <address>
             <p>Rua Esperança, 118 – Centro, São Paulo/SP</p>
@@ -66,6 +76,7 @@
         <p>&copy; 2024 Cozinha Solidária 24h. Todos os direitos reservados.</p>
     </footer>
 
+    <script src="js/script.js"></script>
 </body>
-
+<!-- <p>v2</p> -->
 </html>
