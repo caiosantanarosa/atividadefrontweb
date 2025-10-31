@@ -273,6 +273,19 @@
 }
 
 /* estilo p tela de cadastro */
+
+.erro-msg {
+    color: #ffffff;
+    font-size: 13px;
+    display: block;
+    margin-top: 4px;
+    font-weight: bold;
+}
+
+input.erro {
+    border: 2px solid #ffffff;
+}
+
 .form {
     background-color: #E76F51;
     padding: 20px;
