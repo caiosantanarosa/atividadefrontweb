@@ -4,6 +4,13 @@
     box-sizing: border-box;
 }
 
+#view{
+    grid-area: main;
+    padding: 10px auto;
+    width: 100%;
+    justify-items: center;
+}
+
 /* estilo p todas as paginas */
 
 .container {
