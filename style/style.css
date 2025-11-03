@@ -13,6 +13,15 @@
 
 /* estilo p todas as paginas */
 
+a:focus,
+button:focus,
+input:focus,
+[tabindex="0"]:focus {
+    /* A cor do outline DEVE ter um contraste de 3:1 com o fundo vizinho */
+    outline: 3px solid #0056b3; /* Um azul forte, por exemplo */
+    outline-offset: 2px; /* Espaçamento entre o elemento e o outline */
+}
+
 .container {
     font-family: Arial, sans-serif;
     line-height: 1.6;
