@@ -1,11 +1,8 @@
-import './router.js';
-
-document.addEventListener('pageLoaded', (e) => {
+document.addEventListener('pageChanged', (e) => {
   const page = e.detail;
 
   if (page === 'cadastro') initCadastro();
   if (page === 'projetos') mostrarCadastros();
-  if (page === 'doacoes') initGraficoDoacoes();
 });
 
 function initCadastro() {

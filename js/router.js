@@ -1,3 +1,4 @@
+// router.js - Controle das páginas SPA
 const view = document.getElementById('view');
 
 const routes = {
@@ -17,8 +18,10 @@ async function loadPage() {
 
   view.innerHTML = html;
 
+  // Dispara evento para inicializar JS da página carregada
   document.dispatchEvent(new CustomEvent('pageLoaded', { detail: page }));
 }
 
 window.addEventListener('hashchange', loadPage);
 window.addEventListener('load', loadPage);
+  
