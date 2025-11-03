@@ -17,7 +17,7 @@
     font-family: Arial, sans-serif;
     line-height: 1.6;
     background-color: #fcbf49;
-    color: #ffffff;
+    color: #000000;
     display: grid;
     grid-template-areas:
         "header header"
@@ -48,7 +48,7 @@
     display: none;
     border: none;
     background: none;
-    color: #ffffff;
+    color: #000000;
     cursor: pointer;
     padding: 5px;
     border-radius: 5px;
@@ -74,7 +74,7 @@
 
 .menu a {
     text-decoration: none;
-    color: #ffffff;
+    color: #000000;
 }
 
 .menu li {
@@ -275,7 +275,7 @@
 /* estilo p tela de cadastro */
 
 .erro-msg {
-    color: #ffffff;
+    color: #000000;
     font-size: 13px;
     display: block;
     margin-top: 4px;
@@ -283,7 +283,7 @@
 }
 
 input.erro {
-    border: 2px solid #ffffff;
+    border: 2px solid #000000;
 }
 
 .form {
@@ -470,6 +470,7 @@ input.erro {
     gap: 10px;
     text-align: center;
     background-color: #003049;
+    color: #ffffff;
 }
 
 @media (max-width: 1200px) {
