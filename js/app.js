@@ -8,31 +8,6 @@ document.addEventListener('pageLoaded', (e) => {
   if (page === 'doacoes') initGraficoDoacoes();
 });
 
-function initGraficoDoacoes() {
-  google.charts.load('current', { 'packages': ['corechart'] });
-  google.charts.setOnLoadCallback(drawChart);
-
-  function drawChart() {
-
-    var data = google.visualization.arrayToDataTable([
-      ['Acao', 'porcentagem'],
-      ['Compra de alimentos', 6],
-      ['Manutenção e Transporte', 2],
-      ['Oficinas e capacitação', 1],
-      ['Ações emergenciais', 1]
-    ]);
-
-    var options = {
-      title: 'Para onde vai sua doação',
-      is3D: true
-    };
-
-    var chart = new google.visualization.PieChart(document.getElementById('piechart'));
-
-    chart.draw(data, options);
-  }
-}
-
 function initCadastro() {
   const form = document.querySelector(".form");
   if (!form) return;
