@@ -13,11 +13,20 @@
 
 /* estilo p todas as paginas */
 
+a:focus,
+button:focus,
+input:focus,
+[tabindex="0"]:focus {
+    /* A cor do outline DEVE ter um contraste de 3:1 com o fundo vizinho */
+    outline: 3px solid #0056b3; /* Um azul forte, por exemplo */
+    outline-offset: 2px; /* Espaçamento entre o elemento e o outline */
+}
+
 .container {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     background-color: #fcbf49;
-    color: #ffffff;
+    color: #000000;
     display: grid;
     grid-template-areas:
         "header header"
@@ -25,6 +34,40 @@
         "footer footer";
     width: 100vw;
     overflow-x: hidden;
+}
+
+.container.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container.high-contrast {
+    background-color: black !important;
+    color: yellow !important;
+    border: 1px solid white !important;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.dark-mode a, .high-contrast a{
+    color: #ffffff;
+}
+
+.dark-mode a:focus,
+.high-contrast a:focus {
+    outline-color: cyan;
+}
+
+.buttons button{
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
 }
 
 .header {
@@ -48,7 +91,7 @@
     display: none;
     border: none;
     background: none;
-    color: #ffffff;
+    color: #000000;
     cursor: pointer;
     padding: 5px;
     border-radius: 5px;
@@ -74,7 +117,7 @@
 
 .menu a {
     text-decoration: none;
-    color: #ffffff;
+    color: #000000;
 }
 
 .menu li {
@@ -275,7 +318,7 @@
 /* estilo p tela de cadastro */
 
 .erro-msg {
-    color: #ffffff;
+    color: #000000;
     font-size: 13px;
     display: block;
     margin-top: 4px;
@@ -283,7 +326,7 @@
 }
 
 input.erro {
-    border: 2px solid #ffffff;
+    border: 2px solid #000000;
 }
 
 .form {
@@ -470,6 +513,7 @@ input.erro {
     gap: 10px;
     text-align: center;
     background-color: #003049;
+    color: #ffffff;
 }
 
 @media (max-width: 1200px) {
